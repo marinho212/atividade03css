@@ -1,0 +1,209 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+    min-height: 60px;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 10px 4%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.simbolo {
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nome-logo {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Menu horizontal */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f5b400;
+}
+
+/* Ícones do cabeçalho */
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Banner com a imagem enviada */
+.banner {
+    width: 100%;
+    height: 90vh;
+    min-height: 450px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("imagmFundo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteúdo sobre a imagem */
+.conteudo {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Posiciona o botão abaixo do logotipo da imagem */
+    padding-top: 230px;
+}
+
+/* Botão SHOP NOW */
+.botao {
+    display: inline-block;
+
+    background-color: white;
+    color: #222;
+
+    padding: 12px 35px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #f5b400;
+    color: black;
+}
+
+/* Rodapé */
+.rodape {
+    width: 100%;
+    background-color: #000;
+    color: #ccc;
+
+    text-align: center;
+    padding: 20px;
+
+    font-size: 12px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+
+    .cabecalho {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nome-logo {
+        font-size: 10px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .icones {
+        display: none;
+    }
+
+    .banner {
+        height: 75vh;
+        min-height: 400px;
+        background-position: center;
+    }
+
+    .conteudo {
+        padding-top: 180px;
+    }
+
+    .botao {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+
+    .banner {
+        height: 65vh;
+        min-height: 350px;
+    }
+
+    .conteudo {
+        padding-top: 140px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+}
